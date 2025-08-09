@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead AI - Master AI Before AI Masters You</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050816; /* Deep navy blue */
+            color: #e2e8f0;
+            overflow-x: hidden;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .hero-gradient-text {
+            background: linear-gradient(to right, #3b82f6, #ec4899); /* Blue to Pink */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-bg {
+            background-color: rgba(17, 24, 39, 0.6); /* Darker, less transparent */
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .card-bg:hover {
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+        }
+        .glow-effect {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 1200px;
+            height: 1200px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, rgba(5, 8, 22, 0) 50%);
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: -10;
+        }
+        #animation-container {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+        }
+        #animation-container canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+            cursor: grab;
+        }
+        .bento-grid {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(1, 1fr);
+        }
+        @media (min-width: 768px) {
+            .bento-grid {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, auto);
+            }
+            .bento-item-1 { grid-column: span 2 / span 2; grid-row: span 2 / span 2;}
+            .bento-item-2 { grid-column: span 2 / span 2; }
+            .bento-item-3 { grid-column: span 1 / span 1; }
+            .bento-item-4 { grid-column: span 1 / span 1; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="glow-effect"></div>
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-md border-b border-slate-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tighter hero-gradient-text">Lead AI</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#mission" class="text-slate-300 hover:text-blue-400 transition-colors duration-300">Mission</a>
+                <a href="#pillars" class="text-slate-300 hover:text-blue-400 transition-colors duration-300">Pillars</a>
+                <a href="#members" class="text-slate-300 hover:text-blue-400 transition-colors duration-300">Members</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="min-h-screen w-full flex items-center pt-24 md:pt-0">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between w-full">
+                <div class="md:w-1/2 lg:w-2/5 text-center md:text-left mb-12 md:mb-0 z-10">
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-slate-100 mb-4">Master AI</h1>
+                    <h2 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter hero-gradient-text mb-6">Before AI Masters You</h2>
+                    <p class="max-w-xl mx-auto md:mx-0 text-lg md:text-xl text-slate-400 mb-10">
+                        Lead AI is an exclusive circle for practitioners dedicated to decoding the future of AI in real-time and gaining a definitive competitive edge.
+                    </p>
+                    <a href="#pillars" class="bg-slate-100 text-slate-900 font-bold px-8 py-4 rounded-lg text-lg hover:bg-slate-200 transition-transform duration-300 hover:scale-105 inline-block">Discover Our Pillars</a>
+                </div>
+                <div class="md:w-1/2 w-full h-[50vh] md:h-auto">
+                    <div id="animation-container"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mission" class="py-20 bg-transparent relative z-10">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="card-bg p-8 rounded-2xl">
+                        <h3 class="text-3xl font-bold mb-4 text-slate-100">Our Mission</h3>
+                        <p class="text-slate-300 leading-relaxed">
+                            "Our mission is to forge a disciplined circle of AI practitioners who decode the future in real-time. Through a relentless weekly exchange of tactical intelligence and proven solutions, we arm our members with the clarity and advantage needed to master the AI revolution."
+                        </p>
+                    </div>
+                    <div class="card-bg p-8 rounded-2xl">
+                        <h3 class="text-3xl font-bold mb-4 text-slate-100">Our Vision</h3>
+                        <p class="text-slate-300 leading-relaxed">
+                            "To become the definitive engine for AI excellence. Lead AI will be the nexus where top talent, groundbreaking projects, and industry-defining opportunities converge, creating the architects who will command the next era of technological evolution."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pillars" class="py-24 relative z-10 bg-transparent">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-100">The Lead AI Advantage</h2>
+                    <p class="mt-4 text-lg text-slate-400 max-w-2xl mx-auto">Our sessions are built around four powerful pillars designed to deliver actionable intelligence.</p>
+                </div>
+                <div class="bento-grid">
+                    <div class="card-bg p-8 rounded-2xl bento-item-1 flex flex-col justify-center">
+                        <div class="mb-4"><svg class="w-12 h-12 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg></div>
+                        <h4 class="text-2xl font-bold mb-3 text-slate-100">AI Tool Spotlight</h4>
+                        <p class="text-slate-400">Hands-on demos of cutting-edge AI tools. We stress-test new applications to decide if a tool is hype or a must-have.</p>
+                    </div>
+                    <div class="card-bg p-8 rounded-2xl bento-item-2">
+                        <div class="mb-4"><svg class="w-12 h-12 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div>
+                        <h4 class="text-2xl font-bold mb-3 text-slate-100">Breakthroughs & Frameworks</h4>
+                        <p class="text-slate-400">Decoding foundational changes in the AI landscape—new models, framework updates, and paradigm shifts.</p>
+                    </div>
+                    <div class="card-bg p-8 rounded-2xl bento-item-3">
+                        <div class="mb-4"><svg class="w-12 h-12 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg></div>
+                        <h4 class="text-xl font-bold mb-3 text-slate-100">In the Trenches</h4>
+                        <p class="text-slate-400 text-sm">Real problems, proven solutions. Learn from a shared library of battle-tested fixes.</p>
+                    </div>
+                    <div class="card-bg p-8 rounded-2xl bento-item-4">
+                        <div class="mb-4"><svg class="w-12 h-12 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg></div>
+                        <h4 class="text-xl font-bold mb-3 text-slate-100">Mastermind Q&A</h4>
+                        <p class="text-slate-400 text-sm">Unscripted, unfiltered, and unstuck. Get direct feedback from expert perspectives.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="members" class="py-24 relative z-10 bg-transparent">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-100">Meet Our Members</h2>
+                    <p class="mt-4 text-lg text-slate-400 max-w-2xl mx-auto">A community driven by experienced practitioners and innovators.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card-bg text-center p-8 rounded-2xl">
+                        <img src="https://placehold.co/128x128/050816/e2e8f0?text=NM" alt="Nagesh Mustapure" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-slate-700">
+                        <h4 class="text-xl font-bold text-slate-100">Nagesh Mustapure</h4>
+                        <p class="text-blue-400 font-semibold">Founder</p>
+                        <p class="text-slate-400">6+ years in Data Science</p>
+                        <p class="text-slate-500">Avira Digital</p>
+                    </div>
+                    <div class="card-bg text-center p-8 rounded-2xl">
+                        <img src="https://placehold.co/128x128/050816/e2e8f0?text=DG" alt="Dipak Gudal" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-slate-700">
+                        <h4 class="text-xl font-bold text-slate-100">Dipak Gudal</h4>
+                        <p class="text-blue-400 font-semibold">Data Scientist</p>
+                        <p class="text-slate-400">4+ years of experience</p>
+                    </div>
+                    <div class="card-bg text-center p-8 rounded-2xl">
+                        <img src="https://placehold.co/128x128/050816/e2e8f0?text=NA" alt="Nikhil Avsula" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-slate-700">
+                        <h4 class="text-xl font-bold text-slate-100">Nikhil Avsula</h4>
+                        <p class="text-blue-400 font-semibold">Software Engineer</p>
+                        <p class="text-slate-400">3+ years of experience</p>
+                        <p class="text-slate-500">Avira Digital</p>
+                    </div>
+                    <div class="card-bg text-center p-8 rounded-2xl">
+                        <img src="https://placehold.co/128x128/050816/e2e8f0?text=AK" alt="Aishwarya K." class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-slate-700">
+                        <h4 class="text-xl font-bold text-slate-100">Aishwarya K.</h4>
+                        <p class="text-blue-400 font-semibold">Data Scientist</p>
+                        <p class="text-slate-400">5+ years of experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-800 relative z-10 bg-transparent">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-400">
+            <p>&copy; 2024 Lead AI. All rights reserved.</p>
+            <p class="text-sm text-slate-500 mt-2">Forging the future of AI excellence.</p>
+        </div>
+    </footer>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    
+    <script type="module">
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+        import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+        import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+        import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+
+        let scene, camera, renderer, composer, controls;
+        let mainGroup, nnGroup;
+        let clock = new THREE.Clock();
+        const allNodes = [];
+
+        function init() {
+            const container = document.getElementById('animation-container');
+            if (!container) return;
+
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(75, container.offsetWidth / container.offsetHeight, 0.1, 1000);
+            camera.position.z = 15;
+
+            renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+            renderer.setSize(container.offsetWidth, container.offsetHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            container.appendChild(renderer.domElement);
+
+            controls = new OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.05;
+            controls.minDistance = 8;
+            controls.maxDistance = 40;
+            controls.autoRotate = true;
+            controls.autoRotateSpeed = 0.4;
+            controls.enableZoom = false;
+            controls.enablePan = false;
+
+            mainGroup = new THREE.Group();
+            scene.add(mainGroup);
+
+            const glowColor = new THREE.Color(0x3b82f6); // Electric Blue
+
+            const ringMaterial = new THREE.MeshBasicMaterial({ color: glowColor, wireframe: true, transparent: true, opacity: 0.1 });
+            for (let i = 0; i < 15; i++) {
+                const geometry = new THREE.TorusGeometry(6 + Math.random() * 2, 0.01 + Math.random() * 0.03, 16, 100);
+                const ring = new THREE.Mesh(geometry, ringMaterial);
+                ring.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, Math.random() * Math.PI);
+                const scale = 0.9 + Math.random() * 0.2;
+                ring.scale.set(scale, scale, scale);
+                mainGroup.add(ring);
+            }
+
+            const particlesGeometry = new THREE.BufferGeometry();
+            const posArray = new Float32Array(10000 * 3);
+            for (let i = 0; i < 10000 * 3; i++) {
+                const theta = Math.random() * 2 * Math.PI;
+                const phi = Math.acos(2 * Math.random() - 1);
+                const r = 5.5 + Math.random() * 3;
+                posArray[i * 3 + 0] = r * Math.sin(phi) * Math.cos(theta);
+                posArray[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+                posArray[i * 3 + 2] = r * Math.cos(phi);
+            }
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            const particleMaterial = new THREE.PointsMaterial({ size: 0.03, color: glowColor, transparent: true, opacity: 0.5, blending: THREE.AdditiveBlending, sizeAttenuation: true });
+            mainGroup.add(new THREE.Points(particlesGeometry, particleMaterial));
+
+            nnGroup = new THREE.Group();
+            mainGroup.add(nnGroup);
+            buildStaticNeuralNetwork();
+
+            const renderScene = new RenderPass(scene, camera);
+            const bloomPass = new UnrealBloomPass(new THREE.Vector2(container.offsetWidth, container.offsetHeight), 1.5, 0.4, 0.85);
+            bloomPass.threshold = 0;
+            bloomPass.strength = 1.6; 
+            bloomPass.radius = 0.7;
+            composer = new EffectComposer(renderer);
+            composer.addPass(renderScene);
+            composer.addPass(bloomPass);
+
+            window.addEventListener('resize', onWindowResize, false);
+        }
+
+        function buildStaticNeuralNetwork() {
+            const layerDefs = [6, 8, 10, 8, 6]; 
+            const layerDistance = 2.0;
+            const nodeGeometry = new THREE.SphereGeometry(0.1, 16, 16);
+            const layers = [];
+
+            for (let i = 0; i < layerDefs.length; i++) {
+                const numNodes = layerDefs[i];
+                const layerZ = -(layerDefs.length - 1) * layerDistance / 2 + i * layerDistance;
+                const layer = { nodePositions: [] };
+                for (let j = 0; j < numNodes; j++) {
+                    const angle = (j / numNodes) * Math.PI * 2;
+                    const radius = 1.5 + (numNodes > 8 ? 0.8 : 0);
+                    const x = Math.cos(angle) * radius;
+                    const y = Math.sin(angle) * radius;
+                    const nodeMaterial = new THREE.MeshBasicMaterial({ color: 0x3b82f6 });
+                    const nodeMesh = new THREE.Mesh(nodeGeometry, nodeMaterial);
+                    nodeMesh.position.set(x, y, layerZ);
+                    allNodes.push(nodeMesh);
+                    layer.nodePositions.push(nodeMesh.position);
+                    nnGroup.add(nodeMesh);
+                }
+                layers.push(layer);
+            }
+
+            const lineMaterial = new THREE.LineBasicMaterial({ color: 0x3b82f6, transparent: true, opacity: 0.15, blending: THREE.AdditiveBlending });
+            for (let i = 0; i < layers.length - 1; i++) {
+                for (const startPos of layers[i].nodePositions) {
+                    for (const endPos of layers[i+1].nodePositions) {
+                        const geometry = new THREE.BufferGeometry().setFromPoints([startPos, endPos]);
+                        nnGroup.add(new THREE.Line(geometry, lineMaterial));
+                    }
+                }
+            }
+        }
+
+        function onWindowResize() {
+            const container = document.getElementById('animation-container');
+            if (!container) return;
+            camera.aspect = container.offsetWidth / container.offsetHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(container.offsetWidth, container.offsetHeight);
+            composer.setSize(container.offsetWidth, container.offsetHeight);
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            const elapsedTime = clock.getElapsedTime();
+            mainGroup.rotation.y += 0.0005;
+            mainGroup.rotation.x += 0.0002;
+
+            allNodes.forEach((node, index) => {
+                const blink = (Math.sin(elapsedTime * 0.5 + index * 0.5) + 1) / 2;
+                const scale = 0.5 + blink * 1.2;
+                node.scale.setScalar(scale);
+                // Oscillate hue between blue (0.6) and magenta (0.85)
+                const hue = 0.6 + (Math.sin(elapsedTime * 0.3 + index * 0.4) + 1) / 2 * 0.25;
+                node.material.color.setHSL(hue, 1.0, 0.6 + blink * 0.3); 
+            });
+
+            controls.update();
+            composer.render();
+        }
+
+        init();
+        animate();
+    </script>
+</body>
+</html>
